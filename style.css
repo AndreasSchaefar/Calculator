@@ -1,0 +1,36 @@
+* { box-sizing: border-box;}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    flex-direction: column;
+    gap: 16px;
+}
+
+.calculator {
+    display: flex;
+    width: 300px;
+    height: 400px;
+    border: solid black;
+    flex-direction: column;
+}
+
+.display {
+    margin: 10px;
+    padding: 32px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button-operand {
+    background-color: lightsalmon;
+    box-sizing: border-box;
+    border: solid black;
+    margin: 8px;
+    padding: 16px;
+}
