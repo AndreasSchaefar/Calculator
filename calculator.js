@@ -1,32 +1,25 @@
-const { reduce } = require("lodash");
-
-const add = function(a,b) {
-	return a + b;
+const add = function() {
+	
 };
 
-const subtract = function(a,b) {
-	return a - b;
+const subtract = function() {
+	
 };
 
-const sum = function(a) {
-	return a.length ? reduce(a, (prev, curr) => prev + curr) : 0;
+const sum = function() {
+	
 };
 
-const multiply = function(a,b) {
-    return reduce(a, (prev, curr) => prev * curr);
+const multiply = function() {
+
 };
 
-const power = function(a, b) {
-    return a ** b
+const power = function() {
+	
 };
 
-const factorial = function(a) {
-	if (a == 0 || a == 1) {
-        return 1;
-    } else if (a < 0) {
-        return -1;
-    };
-    return a * factorial(a-1);
+const factorial = function() {
+	
 };
 
 // Do not edit below this line
