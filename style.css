@@ -32,7 +32,7 @@ body {
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
     border-radius: 51.33333333333333px;
     border: solid black;
-    padding: 40px 16px 35px;
+    padding: 40px 16px 30px;
     grid-gap: 8px;
     background-color: rgb(28, 28, 28);
     color: rgb(255, 255, 255);
@@ -60,6 +60,7 @@ body {
     align-items: flex-end;
     word-wrap: break-word;
     word-break: break-all;
+    margin: 8px;
 }
 
 .dark-grey {
@@ -84,5 +85,6 @@ body {
 .previous-operation {
     font-size: 2.7rem;
     color: rgba(255, 255, 255, .85);
+    min-height: 100px;
 }
 
