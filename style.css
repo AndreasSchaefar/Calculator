@@ -1,142 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-* { box-sizing: border-box;}
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-
-
-:root {
-    --calculator-width: 300px;
-    --calculator-height: 570px;
-    --two-thirds-height: calc(var(--calculator-height) * (2/3)); 
-    --display-height: calc(var(--calculator-height)/3);
-    font-family: 'Roboto', sans-serif;
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: normal;
 }
 
 body {
-    background-color: rgb(80, 80, 80);
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+        to bottom,
+        #70c25c 0%, #70c25c 30%,
+        #ffc04a 30%, #ffc04a 42.5%,
+        #fc903d 42.5%, #fc903d 55%,
+        #e94752 55%, #e94752 67.5%,
+        #a954a5 67.5%, #a954a5 80%,
+        #00afe0 80%, #00afe0 100%);
 }
-
-.container {
+  
+.iphone-screen {
     display: flex;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; 
-    flex-direction: column;
-    gap: 16px;
 }
 
-.calculator {
-    border: solid black 4px;
-    display: flex;
-    width: var(--calculator-width);
-    height: var(--calculator-height);
-    flex-direction: column;
-    border-radius: 30px;
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    border-radius: 51.33333333333333px;
+    border: solid black;
+    padding: 40px 16px 35px;
+    grid-gap: 8px;
     background-color: rgb(28, 28, 28);
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
-.display {
-    width: 100%;
-    height: var(--display-height);
-    display: flex;
-    flex-direction: column;
-}
-
-
-.pad {
-    display: flex;
-    flex-direction: column;
-    height: var(--two-thirds-height);
-    width: 100%;
-    padding: 8px;
-    flex-grow: 1;
-    gap: 12px;
-}
-
-.center {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.bottom {
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-}
-
-#zero {
-    flex-grow: 4;
-    border-radius: 30px;
-    text-align: start;
-}
-
-.button {
-    display: inline-block;
-    font-weight: bolder;
-    text-align: center;
-    font-size: 18px;
-    padding: 1.2rem;
-    border-radius: 50%;
-    flex: 1 1 0;
+.calculator-grid > button {
     cursor: pointer;
+    font-size: 2.2rem;
+    outline: none;
+    border: none;
+    border-radius: 50%;
 }
 
-.dark-grey-controls {
+.span-2 {
+    grid-column: span 2;
+    border-radius: 70px !important;
+}
+
+.output {
+    grid-column: 1 / -1;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.dark-grey {
     background-color: rgb(80, 80, 80);
     color: white;
 }
 
-.light-grey-controls {    
-    background-color: rgb(212, 212, 210);
-    color: rgb(28, 28, 28);
-}
-
-.yellow-controls {
+.yellow {
     background-color: rgb(255, 149, 0);
     color: white;
 }
 
-.dark-grey-controls:hover {
-    background-color: rgba(80, 80, 80, 0.9);
+.light-grey {
+    background-color: rgb(212, 212, 210);
+    color: rgb(28, 28, 28);
 }
 
-.light-grey-controls:hover {
-    background-color: rgba(212, 212, 210, 0.9);
+.current-operation {
+    font-size: 5.3rem;
 }
 
-.yellow-controls:hover {
-    background-color: rgba(255, 149, 0, 0.9);
+.previous-operation {
+    font-size: 2.7rem;
+    color: rgba(255, 255, 255, .85);
 }
 
-
-.calculations {
-    height: var(--two-thirds-height);
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    font-size: 1.8rem;
-    white-space: initial;
-}
-
-.calculation-field {
-    width: 100%;
-    height: 74px;
-    font-size: 3rem;
-}
-
-
-.calculation-field,
-.calculations {
-    display: flex;
-    padding: 8px;
-    justify-content: flex-end;
-    align-items: flex-end;  
-}
-
-.operations {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 0;
-    text-align: end;
-}
