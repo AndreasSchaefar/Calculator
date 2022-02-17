@@ -88,3 +88,16 @@ body {
     min-height: 100px;
 }
 
+.yellow.selected {
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 149, 0);
+}
+
+
+.calculator-grid > button:not(.yellow):hover {
+    background-color: grey;
+}
+
+.calculator-grid > button.yellow:hover {
+    background-color: rgb(254, 200, 126);
+}
