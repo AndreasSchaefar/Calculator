@@ -64,7 +64,7 @@ class Calculator {
             default:
                 break;
         }
-        //let result = this.add(Number(this.operand.curr), Number(this.operand.prev));
+        result = Math.round(result * 100) / 100        ;
         this.isOperation = true;
         this.current.textContent = result;
         this.operand.prev = result;
